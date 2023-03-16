@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone_app/components/profile-page.dart';
-import 'package:instagram_clone_app/components/profile-page.dart';
-import 'package:instagram_clone_app/components/timeline-post.dart';
+import 'package:homework_message/components/profile-page.dart';
+import 'package:homework_message/message-page/message-page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: _isDarkModeEnabled ? _darkTheme : _lightTheme,
-      home: ProfilePage(),
+      home: MessagePage(),
       
     );
   }
