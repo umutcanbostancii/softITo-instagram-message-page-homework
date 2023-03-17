@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: _isDarkModeEnabled ? _darkTheme : _lightTheme,
-      home: TimelinePostWidget(),
+      home: const ProfilePage(),
       
     );
   }

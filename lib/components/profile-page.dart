@@ -1,12 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:homework_message/components/bottom-navbar.dart';
+import 'package:homework_message/components/profile_grid.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    _tabController = TabController(length: 4, vsync: this);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: MyStatefulWidget(),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -212,31 +234,41 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: 30,
-            width: 370,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 5.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.menu_book)),
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.view_module_rounded)),
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.newspaper_outlined)),
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.person_pin_outlined)),
-                ],
-              ),
+          Column(
+            children: [
+              TabBar(controller: _tabController, tabs: const [
+                Tab(
+                  icon: Icon(
+                    Icons.menu_book,
+                    color: Colors.white,
+                  ),
+                ),
+                Tab(
+                  icon: Icon(Icons.view_module_rounded),
+                ),
+                Tab(
+                  icon: Icon(Icons.newspaper_outlined),
+                ),
+                Tab(
+                  icon: Icon(Icons.person_pin_outlined),
+                ),
+              ]),
+            ],
+          ),
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: const [
+                ProfileGridView(),
+                ProfileGridView(),
+                ProfileGridView(),
+                ProfileGridView(),
+              ],
             ),
-          )
+          ),
         ],
       ),
+      // bottomNavigationBar: BottomNavbar(),
     );
   }
 }
