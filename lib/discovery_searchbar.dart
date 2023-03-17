@@ -41,12 +41,12 @@ Widget searchBarWidget() {
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide(
-              color: Colors.white,
+              color: Colors.black,
             )),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide(
-              color: Colors.white,
+              color: Colors.black,
             ))),
   );
 }

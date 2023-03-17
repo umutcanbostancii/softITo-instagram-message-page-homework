@@ -36,11 +36,14 @@ class MessagePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          Column(
-            children: [
-              TextField(
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              child: TextField(
                 controller: _typedText,
                 onChanged: (value) {},
                 style: const TextStyle(color: Colors.grey, fontSize: 16),
@@ -66,38 +69,42 @@ class MessagePage extends StatelessWidget {
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
                         borderSide: const BorderSide(
-                          color: Colors.white,
+                          color: Colors.black,
                         )),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
                         borderSide: const BorderSide(
-                          color: Colors.white,
+                          color: Colors.black54,
                         ))),
               ),
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: TimeLineStories(),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: TimeLineStories(),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 8.0),
+              child: Text(
+                "Messages",
+                style: TextStyle(color: Colors.white, fontSize: 17),
               ),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Row(
-                      children: const [
-                        Text(
-                          "Messages",
-                          style: TextStyle(color: Colors.white, fontSize: 17),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              
-            ],
-          ),
-          
-        ],
+            ),
+            Flexible(child: ListView(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              children: const  [
+                MessageListView(),
+                MessageListView(),
+                MessageListView(),
+                MessageListView(),
+                MessageListView(),
+                MessageListView(),
+                MessageListView(),
+                MessageListView(),
+              ],
+            ),),
+          ],
+        ),
       ),
     );
   }
