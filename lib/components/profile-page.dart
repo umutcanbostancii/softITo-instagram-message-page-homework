@@ -182,7 +182,7 @@ class ProfilePage extends StatelessWidget {
                 SizedBox(
                   width: 150,
                   child: Padding(
-                    padding: const EdgeInsets.only(left:8.0),
+                    padding: const EdgeInsets.only(left: 8.0),
                     child: OutlinedButton(
                       onPressed: () {},
                       child: const Text(
@@ -197,12 +197,13 @@ class ProfilePage extends StatelessWidget {
                 SizedBox(
                   width: 70,
                   child: Padding(
-                    padding: const EdgeInsets.only(left:8.0),
+                    padding: const EdgeInsets.only(left: 8.0),
                     child: OutlinedButton(
                       onPressed: () {},
                       child: const Center(
-                        child:  Icon(
-                          Icons.person_off_sharp, color: Colors.white,
+                        child: Icon(
+                          Icons.person_off_sharp,
+                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -211,6 +212,29 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: 30,
+            width: 370,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 5.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                      onPressed: () {}, icon: const Icon(Icons.menu_book)),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.view_module_rounded)),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.newspaper_outlined)),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.person_pin_outlined)),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
