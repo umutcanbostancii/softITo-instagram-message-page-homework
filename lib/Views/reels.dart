@@ -31,11 +31,11 @@ class Reels extends StatelessWidget {
                   const Spacer(),
                   Column(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.favorite_outline,
                         size: 22,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                       Text(reel.likeCount.toString()),
@@ -54,11 +54,11 @@ class Reels extends StatelessWidget {
                   const Spacer(),
                   Column(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.comment_rounded,
                         size: 22,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 9,
                       ),
                       Text(reel.commentCount.toString()),
@@ -112,13 +112,13 @@ class Reels extends StatelessWidget {
               ),
               Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Text(reel.content),
-                  Spacer(),
-                  Icon(Icons.more_vert),
-                  SizedBox(
+                  const Spacer(),
+                  const Icon(Icons.more_vert),
+                  const SizedBox(
                     width: 10,
                   )
                 ],
