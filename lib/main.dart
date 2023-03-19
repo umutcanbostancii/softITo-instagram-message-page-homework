@@ -6,10 +6,17 @@ import 'package:homework_message/components/profile-page.dart';
 import 'package:homework_message/components/timeline-post.dart';
 import 'package:homework_message/message-page/message-page.dart';
 import 'package:homework_message/message-page/message_listview.dart';
+import 'package:homework_message/provider/reels_provider.dart';
 import 'package:homework_message/timeline_stories.dart';
+import 'package:provider/provider.dart';
+
+import 'Views/reels_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [ListenableProvider(create: (_) => ReelsProvider())],
+    child: const MyApp(),
+  ));
 }
 
 bool _isDarkModeEnabled = true;

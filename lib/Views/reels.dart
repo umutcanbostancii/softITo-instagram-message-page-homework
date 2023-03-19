@@ -1,24 +1,26 @@
+import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:homework_message/components/bottom-navbar.dart';
 
-class ReelsPage extends StatelessWidget {
-  const ReelsPage({super.key});
+import 'package:homework_message/components/bottom-navbar.dart';
+import 'package:homework_message/models/reels_model.dart';
+
+class Reels extends StatelessWidget {
+  final ReelsModel reel;
+  const Reels({super.key, required this.reel});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Reels"),
-        centerTitle: false,
-        actions: [
-          IconButton(
-              onPressed: () {}, icon: const Icon(Icons.camera_alt_outlined))
-        ],
-      ),
       body: Stack(
         children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            child: Image.network(
+              reel.media,
+              fit: BoxFit.cover,
+            ),
+          ),
           Column(
             children: [
               const SizedBox(
@@ -28,7 +30,7 @@ class ReelsPage extends StatelessWidget {
                 children: [
                   const Spacer(),
                   Column(
-                    children: const [
+                    children: [
                       Icon(
                         Icons.favorite_outline,
                         size: 22,
@@ -36,7 +38,7 @@ class ReelsPage extends StatelessWidget {
                       SizedBox(
                         height: 8,
                       ),
-                      Text("109"),
+                      Text(reel.likeCount.toString()),
                     ],
                   ),
                   const SizedBox(
@@ -51,7 +53,7 @@ class ReelsPage extends StatelessWidget {
                 children: [
                   const Spacer(),
                   Column(
-                    children: const [
+                    children: [
                       Icon(
                         Icons.comment_rounded,
                         size: 22,
@@ -59,7 +61,7 @@ class ReelsPage extends StatelessWidget {
                       SizedBox(
                         height: 9,
                       ),
-                      Text("209"),
+                      Text(reel.commentCount.toString()),
                     ],
                   ),
                   const SizedBox(
@@ -73,14 +75,13 @@ class ReelsPage extends StatelessWidget {
                     width: 5,
                   ),
                   Stack(
-                    children: const [
+                    children: [
                       CircleAvatar(
                         radius: 17,
                         backgroundColor: Colors.amber,
                         child: CircleAvatar(
                           radius: 15,
-                          backgroundImage: NetworkImage(
-                              "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80"),
+                          backgroundImage: NetworkImage(reel.userAvatar),
                         ),
                       ),
                     ],
@@ -88,7 +89,7 @@ class ReelsPage extends StatelessWidget {
                   const SizedBox(
                     width: 12,
                   ),
-                  const Text("Profile Name"),
+                  Text(reel.firstName),
                   const SizedBox(
                     width: 12,
                   ),
@@ -110,11 +111,11 @@ class ReelsPage extends StatelessWidget {
                 height: 8,
               ),
               Row(
-                children: const [
+                children: [
                   SizedBox(
                     width: 5,
                   ),
-                  Text("Content Comment"),
+                  Text(reel.content),
                   Spacer(),
                   Icon(Icons.more_vert),
                   SizedBox(
@@ -195,28 +196,28 @@ class ReelsPage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 9,
                   ),
-                  Icon(
+                  const Icon(
                     Icons.music_note,
                     size: 20,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
-                  Text(
+                  const Text(
                     "Irem-Hayalet Sevgilim",
                     style: TextStyle(fontSize: 10),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 2,
                   ),
-                  Text(
+                  const Text(
                     ". Original Audio",
                     style: TextStyle(fontSize: 9),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     children: [
                       ClipRRect(
@@ -230,7 +231,7 @@ class ReelsPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   )
                 ],
@@ -239,7 +240,6 @@ class ReelsPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: const MyStatefulWidget(),
     );
   }
 }
