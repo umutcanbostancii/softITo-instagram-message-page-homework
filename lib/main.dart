@@ -1,10 +1,22 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-import 'package:instagram_clone_app/components/profile-page.dart';
-import 'package:instagram_clone_app/components/profile-page.dart';
-import 'package:instagram_clone_app/components/timeline-post.dart';
+import 'package:homework_message/Views/reels.dart';
+import 'package:homework_message/components/profile-page.dart';
+import 'package:homework_message/components/timeline-post.dart';
+import 'package:homework_message/message-page/message-page.dart';
+import 'package:homework_message/message-page/message_listview.dart';
+import 'package:homework_message/provider/reels_provider.dart';
+import 'package:homework_message/timeline_stories.dart';
+import 'package:provider/provider.dart';
+
+import 'Views/reels_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [ListenableProvider(create: (_) => ReelsProvider())],
+    child: const MyApp(),
+  ));
 }
 
 bool _isDarkModeEnabled = true;
@@ -20,8 +32,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: _isDarkModeEnabled ? _darkTheme : _lightTheme,
-      home: ProfilePage(),
-      
+      home: const ReelsPage(),
     );
   }
 }

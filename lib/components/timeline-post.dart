@@ -12,10 +12,10 @@ class _TimelinePostWidget extends State<TimelinePostWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         leading: Image.network(
           "https://thepracticaldev.s3.amazonaws.com/i/9dgus6e6o80pv1gx8y7t.png",
-          color: Colors.black, 
+          color: Colors.red, 
         ),
         leadingWidth: 150,
         
