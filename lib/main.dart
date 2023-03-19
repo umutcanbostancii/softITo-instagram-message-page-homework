@@ -1,9 +1,11 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:homework_message/Views/chat_screen.dart';
 import 'package:homework_message/Views/reels.dart';
 import 'package:homework_message/components/profile-page.dart';
 import 'package:homework_message/components/timeline-post.dart';
+import 'package:homework_message/message-page/chat_appBar.dart';
 import 'package:homework_message/message-page/message-page.dart';
 import 'package:homework_message/message-page/message_listview.dart';
 import 'package:homework_message/provider/reels_provider.dart';
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: _isDarkModeEnabled ? _darkTheme : _lightTheme,
-      home: const ReelsPage(),
+      home: const ChatScreen(),
     );
   }
 }
