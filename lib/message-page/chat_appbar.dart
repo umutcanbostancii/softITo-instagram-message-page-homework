@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class ChatAppBar extends StatelessWidget {
+class ChatAppBar extends StatelessWidget with PreferredSizeWidget {
   const ChatAppBar({super.key});
-
+  @override
+  Size get preferredSize => Size.fromHeight(56);
   @override
   Widget build(BuildContext context) {
     return AppBar(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homework_message/components/bottom-navbar.dart';
 
 class TimelinePostWidget extends StatefulWidget {
   const TimelinePostWidget({Key? key}) : super(key: key);
@@ -15,19 +16,17 @@ class _TimelinePostWidget extends State<TimelinePostWidget> {
         backgroundColor: Colors.black,
         leading: Image.network(
           "https://thepracticaldev.s3.amazonaws.com/i/9dgus6e6o80pv1gx8y7t.png",
-          color: Colors.red, 
+          color: Colors.red,
         ),
         leadingWidth: 150,
-        
       ),
       body: ListView.builder(
         itemCount: 10,
         itemBuilder: (BuildContext context, int index) {
           return const PostCard();
         },
-        
       ),
-      
+      bottomNavigationBar: MyStatefulWidget(),
     );
   }
 }

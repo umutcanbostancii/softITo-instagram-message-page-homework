@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class ChatMessageTextField extends StatelessWidget {
   const ChatMessageTextField({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+    return SafeArea(
+      child: SizedBox(
         child: TextField(
           decoration: InputDecoration(
             prefixIcon: IconButton(
