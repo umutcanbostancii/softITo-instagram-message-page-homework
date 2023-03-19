@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:homework_message/message-page/message_listview.dart';
+
 import 'package:homework_message/timeline_stories.dart';
+
+import '../Widgets/message_listview.dart';
 
 TextEditingController _typedText = TextEditingController();
 
@@ -89,20 +91,21 @@ class MessagePage extends StatelessWidget {
                 style: TextStyle(color: Colors.white, fontSize: 17),
               ),
             ),
-            Flexible(child: ListView(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              children: const  [
-                MessageListView(),
-                MessageListView(),
-                MessageListView(),
-                MessageListView(),
-                MessageListView(),
-                MessageListView(),
-                MessageListView(),
-                MessageListView(),
-              ],
-            ),),
+            Flexible(
+              child: ListView(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                children: const [
+                  MessageListView(),
+                  MessageListView(),
+                  MessageListView(),
+                  MessageListView(),
+                  MessageListView(),
+                  MessageListView(),
+                  MessageListView(),
+                ],
+              ),
+            ),
           ],
         ),
       ),

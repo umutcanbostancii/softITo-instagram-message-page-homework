@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homework_message/components/bottom-navbar.dart';
+import 'package:homework_message/components/buttom_appBar.dart';
 
 class TimelinePostWidget extends StatefulWidget {
   const TimelinePostWidget({Key? key}) : super(key: key);
@@ -18,6 +19,20 @@ class _TimelinePostWidget extends State<TimelinePostWidget> {
           "https://thepracticaldev.s3.amazonaws.com/i/9dgus6e6o80pv1gx8y7t.png",
           color: Colors.red,
         ),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.favorite,
+                size: 27,
+              )),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.send,
+                size: 27,
+              )),
+        ],
         leadingWidth: 150,
       ),
       body: ListView.builder(
@@ -26,7 +41,6 @@ class _TimelinePostWidget extends State<TimelinePostWidget> {
           return const PostCard();
         },
       ),
-      bottomNavigationBar: MyStatefulWidget(),
     );
   }
 }
