@@ -22,7 +22,7 @@ class ReelsPage extends StatelessWidget {
           Column(
             children: [
               const SizedBox(
-                height: 400,
+                height: 390,
               ),
               Row(
                 children: [
@@ -31,21 +31,21 @@ class ReelsPage extends StatelessWidget {
                     children: const [
                       Icon(
                         Icons.favorite_outline,
-                        size: 20,
+                        size: 22,
                       ),
                       SizedBox(
-                        height: 9,
+                        height: 8,
                       ),
                       Text("109"),
                     ],
                   ),
                   const SizedBox(
-                    width: 10,
+                    width: 9,
                   ),
                 ],
               ),
               const SizedBox(
-                height: 15,
+                height: 13,
               ),
               Row(
                 children: [
@@ -54,7 +54,7 @@ class ReelsPage extends StatelessWidget {
                     children: const [
                       Icon(
                         Icons.comment_rounded,
-                        size: 20,
+                        size: 22,
                       ),
                       SizedBox(
                         height: 9,
@@ -63,7 +63,7 @@ class ReelsPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    width: 10,
+                    width: 9,
                   ),
                 ],
               ),
@@ -72,32 +72,49 @@ class ReelsPage extends StatelessWidget {
                   const SizedBox(
                     width: 5,
                   ),
-                  const CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80"),
-                    radius: 15,
+                  Stack(
+                    children: const [
+                      CircleAvatar(
+                        radius: 17,
+                        backgroundColor: Colors.amber,
+                        child: CircleAvatar(
+                          radius: 15,
+                          backgroundImage: NetworkImage(
+                              "https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80"),
+                        ),
+                      ),
+                    ],
                   ),
                   const SizedBox(
-                    width: 5,
+                    width: 12,
                   ),
-                  const Text("data"),
+                  const Text("Profile Name"),
                   const SizedBox(
-                    width: 5,
+                    width: 12,
                   ),
-                  OutlinedButton(onPressed: () {}, child: const Text("Follow")),
+                  SizedBox(
+                      width: 77,
+                      height: 20,
+                      child: OutlinedButton(
+                          onPressed: () {}, child: const Text("Follow"))),
                   const Spacer(),
-                  const Icon(Icons.send),
+                  const Icon(
+                    Icons.send,
+                  ),
                   const SizedBox(
                     width: 10,
                   )
                 ],
+              ),
+              const SizedBox(
+                height: 8,
               ),
               Row(
                 children: const [
                   SizedBox(
                     width: 5,
                   ),
-                  Text("data"),
+                  Text("Content Comment"),
                   Spacer(),
                   Icon(Icons.more_vert),
                   SizedBox(
@@ -105,41 +122,124 @@ class ReelsPage extends StatelessWidget {
                   )
                 ],
               ),
+              const SizedBox(
+                height: 8,
+              ),
               Row(
-                children: const [
-                  SizedBox(
+                children: [
+                  const SizedBox(
                     width: 5,
                   ),
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://images.unsplash.com/photo-1623039497055-e79fcaebd4ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"),
-                    radius: 20,
+                  Stack(
+                    children: const <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(left: 27),
+                        child: CircleAvatar(
+                          backgroundColor: Colors.purple,
+                          radius: 9,
+                          child: CircleAvatar(
+                            radius: 8,
+                            backgroundImage: NetworkImage(
+                                'https://images.unsplash.com/photo-1558898479-33c0057a5d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80'),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 15),
+                        child: CircleAvatar(
+                          backgroundColor: Colors.red,
+                          radius: 9,
+                          child: CircleAvatar(
+                            radius: 8,
+                            backgroundImage: NetworkImage(
+                                'https://images.unsplash.com/photo-1440508319978-8b67875e39d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2334&q=80'),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 3),
+                        child: CircleAvatar(
+                          backgroundColor: Colors.amber,
+                          radius: 9,
+                          child: CircleAvatar(
+                            radius: 8,
+                            backgroundImage: NetworkImage(
+                                'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    width: 5,
+                  const SizedBox(
+                    width: 10,
                   ),
-                  Text("name"),
+                  const Text(
+                    "Liked by Samet and 293493 other people ",
+                    style: TextStyle(fontSize: 9),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: const [
+                      SizedBox(
+                        width: 5,
+                      ),
+                    ],
+                  )
                 ],
               ),
-              SizedBox(
-                height: 10,
+              const SizedBox(
+                height: 20,
+                width: 5,
               ),
               Row(
-                children: const [
+                children: [
                   SizedBox(
-                    width: 5,
+                    width: 9,
+                  ),
+                  Icon(
+                    Icons.music_note,
+                    size: 20,
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  Text("name"),
+                  Text(
+                    "Irem-Hayalet Sevgilim",
+                    style: TextStyle(fontSize: 10),
+                  ),
+                  SizedBox(
+                    width: 2,
+                  ),
+                  Text(
+                    ". Original Audio",
+                    style: TextStyle(fontSize: 9),
+                  ),
+                  Spacer(),
+                  Column(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(5),
+                        child: Image.network(
+                          "https://img.internethaber.com/rcman/Cw480h270q95gc/storage/files/images/2020/12/09/ffff-lXUV_cover.jpg",
+                          width: 30,
+                          height: 30,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: 8,
+                  )
                 ],
               )
             ],
-          )
+          ),
         ],
       ),
-      bottomNavigationBar: MyStatefulWidget(),
+      bottomNavigationBar: const MyStatefulWidget(),
     );
   }
 }

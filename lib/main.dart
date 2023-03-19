@@ -1,12 +1,12 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:homework_message/Views/reels.dart';
 import 'package:homework_message/components/profile-page.dart';
 import 'package:homework_message/components/timeline-post.dart';
 import 'package:homework_message/message-page/message-page.dart';
 import 'package:homework_message/message-page/message_listview.dart';
 import 'package:homework_message/timeline_stories.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -25,8 +25,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: _isDarkModeEnabled ? _darkTheme : _lightTheme,
-      home: const ProfilePage(),
-      
+      home: const ReelsPage(),
     );
   }
 }
