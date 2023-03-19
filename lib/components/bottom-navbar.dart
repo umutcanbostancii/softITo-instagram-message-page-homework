@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({super.key});
 
@@ -11,28 +9,21 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Index 0: Home',
-      style: optionStyle,
     ),
     Text(
       'Index 1: Search',
-      style: optionStyle,
     ),
     Text(
       'Index 2: Post',
-      style: optionStyle,
     ),
     Text(
       'Index 3: Reels',
-      style: optionStyle,
     ),
     Text(
       'Index 2: Profile',
-      style: optionStyle,
     ),
   ];
 

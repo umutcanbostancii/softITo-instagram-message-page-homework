@@ -17,15 +17,17 @@ class ChatMessage extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                color:
-                    message.sender == 'Alice' ? Colors.blue : Colors.grey[200],
+                color: message.sender == 'Alice'
+                    ? Colors.deepPurple.shade900
+                    : Colors.grey.shade800,
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Text(
                 message.text,
                 style: TextStyle(
-                  color:
-                      message.sender == 'Alice' ? Colors.white : Colors.black,
+                  color: message.sender == 'Alice'
+                      ? Colors.white
+                      : Colors.grey.shade300,
                   fontSize: 16,
                 ),
               ),
