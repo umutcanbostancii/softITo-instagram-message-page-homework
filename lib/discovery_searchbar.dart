@@ -7,7 +7,7 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }
 
@@ -18,10 +18,10 @@ Widget searchBarWidget() {
     onChanged: (value) {
       print("value $value");
     },
-    style: TextStyle(color: Colors.grey, fontSize: 16),
+    style: const TextStyle(color: Colors.grey, fontSize: 16),
     decoration: InputDecoration(
         suffixIcon: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.clear,
             color: Colors.grey,
           ),
@@ -29,23 +29,23 @@ Widget searchBarWidget() {
             _typedText.clear();
           },
         ),
-        prefixIcon: Icon(
+        prefixIcon: const Icon(
           Icons.search,
           color: Colors.grey,
         ),
         hintText: "Search",
-        hintStyle: TextStyle(color: Colors.grey),
+        hintStyle: const TextStyle(color: Colors.grey),
         filled: true,
-        fillColor: Color.fromARGB(255, 61, 57, 57),
-        contentPadding: EdgeInsets.symmetric(vertical: 5),
+        fillColor: const Color.fromARGB(255, 61, 57, 57),
+        contentPadding: const EdgeInsets.symmetric(vertical: 5),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.black,
             )),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Colors.black,
             ))),
   );

@@ -28,7 +28,6 @@ class _ProfilePageState extends State<ProfilePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: MyStatefulWidget(),
       appBar: AppBar(
         actions: [
           IconButton(
@@ -268,7 +267,6 @@ class _ProfilePageState extends State<ProfilePage>
           ),
         ],
       ),
-      // bottomNavigationBar: BottomNavbar(),
     );
   }
 }

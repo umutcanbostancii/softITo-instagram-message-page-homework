@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:homework_message/components/bottom-navbar.dart';
-import 'package:homework_message/components/buttom_appBar.dart';
+import 'package:homework_message/message-page/message-page.dart';
 
 class TimelinePostWidget extends StatefulWidget {
   const TimelinePostWidget({Key? key}) : super(key: key);
@@ -17,7 +16,7 @@ class _TimelinePostWidget extends State<TimelinePostWidget> {
         backgroundColor: Colors.black,
         leading: Image.network(
           "https://thepracticaldev.s3.amazonaws.com/i/9dgus6e6o80pv1gx8y7t.png",
-          color: Colors.red,
+          color: Colors.white,
         ),
         actions: [
           IconButton(
@@ -27,7 +26,10 @@ class _TimelinePostWidget extends State<TimelinePostWidget> {
                 size: 27,
               )),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MessagePage()));
+              },
               icon: const Icon(
                 Icons.send,
                 size: 27,
@@ -147,7 +149,7 @@ class PostCard extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 49),
+                    padding: EdgeInsets.only(left: 55),
                     child: Text(
                       'Liked by johndoe and 10 others',
                       style: TextStyle(fontWeight: FontWeight.bold),

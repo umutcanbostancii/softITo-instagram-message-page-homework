@@ -39,7 +39,6 @@ class _ReelsPageState extends State<ReelsPage> {
               .toList()
         ],
       )),
-      bottomNavigationBar: const MyStatefulWidget(),
     );
   }
 }
