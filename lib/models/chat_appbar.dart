@@ -14,7 +14,7 @@ class ChatAppBar extends StatelessWidget with PreferredSizeWidget {
           Stack(
             children: const <Widget>[
               Padding(
-                padding: EdgeInsets.only(left: 3.0, right: 8.0),
+                padding: EdgeInsets.only(left: 1.0, right: 12.0),
                 child: CircleAvatar(
                   backgroundColor: Colors.grey,
                   radius: 20,
@@ -34,20 +34,20 @@ class ChatAppBar extends StatelessWidget with PreferredSizeWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               Text(
-                "Profile Name",
+                "Alice",
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
               ),
               SizedBox(
                 height: 5,
               ),
               Text(
-                "username",
+                "alicejohn",
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
               ),
             ],
           ),
           const SizedBox(
-            width: 165,
+            width: 152,
           ),
           IconButton(
               onPressed: () {},

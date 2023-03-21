@@ -16,7 +16,7 @@ class MessagePage extends StatelessWidget {
       appBar: AppBar(
         title: Row(
           children: const [
-            Text("Profile Name"),
+            Text("Alice"),
           ],
         ),
         leadingWidth: 100,

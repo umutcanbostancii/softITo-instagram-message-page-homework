@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:homework_message/Views/discovery_page.dart';
 import 'package:homework_message/Views/reels_page.dart';
 import 'package:homework_message/components/bottom_appBar.dart';
 import 'package:homework_message/components/profile-page.dart';
@@ -17,7 +18,7 @@ class MainScreen extends StatelessWidget {
     PageProvider pageProvider = Provider.of<PageProvider>(context);
     final List<Widget> pages = [
       const TimelinePostWidget(),
-      const Placeholder(),
+      const SearchPageUserList(),
       const Placeholder(),
       const ReelsPage(),
       const ProfilePage(),

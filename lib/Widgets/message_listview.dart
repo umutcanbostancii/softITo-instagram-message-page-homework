@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:homework_message/Views/chat_screen.dart';
+import 'package:homework_message/Views/chat_screen_all.dart';
+import 'package:homework_message/message-page/message-page.dart';
 
-class MessageListView extends StatelessWidget {
+class MessageListView extends StatefulWidget {
   const MessageListView({super.key});
 
+  @override
+  State<MessageListView> createState() => _MessageListViewState();
+}
+
+class _MessageListViewState extends State<MessageListView> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -29,24 +37,36 @@ class MessageListView extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 5),
+                  padding: const EdgeInsets.only(left: 1),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "Sender Name",
-                        style: TextStyle(
+                    children: [
+                      TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ChatScreen()));
+                          },
+                          child: const Text(
+                            "Sender Name",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.normal,
+                            ),
+                            textAlign: TextAlign.start,
+                          )),
+                      const SizedBox(height: 0.2),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 8.0),
+                        child: Text(
+                          "Sent Just Now",
+                          style: TextStyle(
                             color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w900),
-                      ),
-                      SizedBox(height: 2),
-                      Text(
-                        "Sent Just Now",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 11,
-                          fontWeight: FontWeight.normal,
+                            fontSize: 11,
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                       ),
                     ],
@@ -71,7 +91,6 @@ class MessageListView extends StatelessWidget {
                 ),
               ),
             ),
-
           ],
         ),
       ),

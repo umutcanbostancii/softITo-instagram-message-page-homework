@@ -27,8 +27,10 @@ class _TimelinePostWidget extends State<TimelinePostWidget> {
               )),
           IconButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MessagePage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MessagePage()));
               },
               icon: const Icon(
                 Icons.send,

@@ -43,7 +43,7 @@ class _ProfilePageState extends State<ProfilePage>
             icon: const Icon(Icons.menu),
             color: Colors.white,
             iconSize: 32,
-          )
+          ),
         ],
         backgroundColor: Colors.black26,
         leading: const Padding(
